@@ -1,4 +1,3 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -17,11 +16,15 @@ module.exports = {
     }),
   ],
 
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,  // handle image files
+        type: "asset/resource",           // webpack 5 asset module
       },
     ],
   },

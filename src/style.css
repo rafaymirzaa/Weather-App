@@ -1,63 +1,76 @@
 
 body {
-  margin: 0;
-  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #dceefc, #f5f9fc);
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #f4f4f4; /* Light grey aesthetic background */
-  font-family: Arial, sans-serif;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+  color: #333;
 }
 
-/* Wrapper that centers everything vertically */
-.centerWrapper {
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 20px;              /* space between input and table */
 }
 
-/* GIF style */
-.centerWrapper img {
-  width: 300px;  /* adjust if needed */
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
-}
-
-/* Search bar styling */
-#search {
-  width: 260px;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+/* input styling */
+#location {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #bbb;
   outline: none;
+  width: 250px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+#location:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
+}
+
+/* table container */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px); /* frosted effect */
+}
+
+/* header only styles */
+thead {
+  background-color: rgba(48, 0, 58, 0.2); /* #30003A color */
+  color: #fff; /* text remains white */
+}
+
+thead th {
+  padding: 15px 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Table body rows */
+tbody td {
+  padding: 12px 20px;
   font-size: 15px;
-  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff; /* white text for readability */
 }
 
-#search:focus {
-  border-color: #0077ff;
-  box-shadow: 0 0 6px rgba(0, 119, 255, 0.3);
-}
 
-#refreshButton {
-  padding: 12px 30px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background: #0077ff;
-  font-size: 15px;
-  color: white;
-  transition: 0.2s;
-}
 
-#refreshButton:hover {
-  background: #005fcc;
-  transform: translateY(-2px);
+/*  hover 
+tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
 }
-
-#refreshButton:active {
-  transform: translateY(0px);
-}
+*/
