@@ -1,7 +1,7 @@
 const output = document.querySelector("#output");
 const locationInput = document.querySelector("#location");
 
-const apiKey = `RBFXECF5PDXH3G7BBGE3XVF98`;
+const apiKey = ``;
 
 function capitaliseFirstLetter(str) {
   if (!str) return "";
